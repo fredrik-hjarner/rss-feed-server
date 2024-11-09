@@ -1,0 +1,17 @@
+{
+  "name": "rss-feed-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@replit/database": "^3.0.1",
+    "express": "^4.21.1",
+    "rss": "^1.2.2"
+  }
+}
