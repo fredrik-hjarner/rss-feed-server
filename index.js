@@ -1,24 +1,15 @@
 import express from 'express';
 import RSS from 'rss';
-import Database from '@replit/database';
 
-const executingInReplit = true;
 let postsWhenRunningLocally = [];
 
 const app = express();
-const db = executingInReplit ? new Database() : undefined;
 
 async function getPosts(){
-  if(executingInReplit) {
-    return await db.get('posts') || [];
-  }
   return postsWhenRunningLocally;
 }
 
 async function setPosts(posts) {
-  if(executingInReplit) {
-    return await db.set('posts', posts);
-  }
   postsWhenRunningLocally = posts;
 }
 
